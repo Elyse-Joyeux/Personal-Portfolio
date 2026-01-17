@@ -1,0 +1,104 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+
+body{
+    background-image: url(hello.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.login {
+    width: 450px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.25); 
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.login input {
+    width: 80%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.7);
+    font-size: 1.4rem;
+}
+
+.login input:focus {
+    border-color: #007f73;
+    box-shadow: 0 0 6px rgba(0,127,115,0.4);
+}
+
+input[type="submit"] {
+    background-color: #007f73;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 95%;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #005f54;
+}
+
+#l1, #l2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #003b36;
+}
+
+
+h3{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #003b36;
+}
+
+
+.login #an {
+    display: block;
+    width: 95%;
+    padding: 12px;
+    margin: 12px auto;
+    background-color: #007f73;
+    color: white;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login #an:hover {
+    background-color: #005f54;
+}
+
+
+.login a.fgt:hover,
+.login a.register:hover {
+    text-decoration: underline;
+}
