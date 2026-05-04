@@ -1,7 +1,7 @@
 let menu = document.querySelector('#menu-icon');
 let navb = document.querySelector('.navb');
 
-menu.onclick = ()=>{
+menu.onclick = () => {
     menu.classList.toggle('bx-x');
     navb.classList.toggle('active');
 }
@@ -32,7 +32,7 @@ serviceBoxes.forEach(box => {
     });
 });
 
-// ── Contact Form Handler ──────────────────────────────────────────
+// Contact Form Handler 
 const contactForm = document.querySelector('.contact form');
 const submitBtn   = document.querySelector('.contact .btn[type="submit"]');
 
@@ -43,18 +43,16 @@ contactForm.addEventListener('submit', async (e) => {
     const email   = contactForm.querySelector('input[placeholder="Email Address"]').value.trim();
     const message = contactForm.querySelector('textarea').value.trim();
 
-    // Basic validation
     if (!name || !email || !message) {
         alert('Please fill in all fields before sending.');
         return;
     }
 
-    // Loading state
     submitBtn.value    = 'Sending...';
     submitBtn.disabled = true;
 
     try {
-        const response = await fetch('https://personal-portfolio-f8qf.onrender.com/api/contact', {
+        const response = await fetch('/.netlify/functions/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, message })
@@ -73,7 +71,6 @@ contactForm.addEventListener('submit', async (e) => {
         console.error('Contact form error:', error);
         alert('❌ Something went wrong. Please try again later.');
     } finally {
-        // Always restore button
         submitBtn.value    = 'Send Message';
         submitBtn.disabled = false;
     }
