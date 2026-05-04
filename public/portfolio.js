@@ -12,7 +12,7 @@ window.onscroll = () => {
 }
 
 const typed = new Typed('.multiple-context', {
-    strings: ['Web developer', 'Junior Cyber Enthusiast'],
+    strings: ['Web Developer', 'Junior Cyber Enthusiast'],
     typeSpeed: 10,
     backSpeed: 50,
     backDelay: 1400,
@@ -32,9 +32,9 @@ serviceBoxes.forEach(box => {
     });
 });
 
-// Contact Form Handler 
+// Contact Form Handler
 const contactForm = document.querySelector('.contact form');
-const submitBtn   = document.querySelector('.contact .btn[type="submit"]');
+const submitBtn   = document.querySelector('.contact input[type="submit"]');
 
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -52,7 +52,7 @@ contactForm.addEventListener('submit', async (e) => {
     submitBtn.disabled = true;
 
     try {
-        const response = await fetch('/.netlify/functions/contact', {
+        const response = await fetch('/api/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, message })
