@@ -12,7 +12,7 @@
   },
   "name": "wui-practice",
   "version": "1.0.0",
-  "description": "",
+  "description": "A personal portfolio website with a Node.js/Express backend that handles contact form submissions via email.",
   "main": "portfolio.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/jelyx-bit/wui-practice/issues"
   },
-  "homepage": "https://github.com/jelyx-bit/wui-practice#readme"
+  "homepage": "https://github.com/jelyx-bit/wui-practice#readme",
+  "devDependencies": {}
 }
